@@ -1,0 +1,64 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --bg-1: #0E1525; /*FUNDO PRINCIPAL*/
+    --BG-2: #17243a; /*VARIAÇÃO*/
+    --neon: #29f9ccac; /*COR NEON PRINCIPAL*/
+    --neon-2: #FFB100; /*COR ALTERNATIVA(OPCIONAL)*/
+    --text: #fff;
+}
+
+header {
+    text-align: center;
+    background-image: url(/img/att.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 729px;
+}
+
+.cliqueaqui{
+    position: fixed; /* coloca ele fixo em relação à página */
+    bottom: 25px; /* distância do topo */
+    left: 50%; /* centraliza horizontalmente */
+    transform: translateX(-50%); /* ajusta para ficar bem no meio */
+
+    padding: 10px 18px;   /* espaço interno (altura/largura) */
+    border-radius: 8px;   /* deixa as bordas arredondadas */
+    border: 2px solid #0E1525;; /* borda neon */
+    background: transparent;   /* sem fundo sólido */
+
+    color: var(--neon);      /* cor do texto */
+    font-weight: 700;     /* texto em negrito */
+    font-size: 18px;      /* tamanho da fonte */
+    cursor: pointer;      /* aparece a “mãozinha” ao passar o mouse */
+
+    text-shadow: 0 0 6px rgba(31, 33, 110, 0.95), 0 0 12px rgba(34, 47, 129, 0.7);;
+    box-shadow: 0 0 8px rgb(24, 44, 66), 0 0 22px rgb(24, 44, 66) inset;;
+}
+
+.cliqueaqui:hover{
+    box-shadow: 0 0 18px rgb(24, 44, 66), 0 0 36px rgb(24, 44, 66), inset 0 0 14px rgb(24, 44, 66);;
+}
+
+@keyframes neonBlink{
+    0%, 48% {opacity:1;} /* brilho normal */
+    50% {opacity:0.7;} /* escurece um pouco */
+    51%, 100% {opacity:1;} /* volta ao brilho */    
+}
+
+.cliqueaqui{
+    animation: neonBlink 1s infinite;
+}
+
+@media (max-width:480px) {
+  .cliqueaqui {
+    font-size: 14px;
+    padding: 8px 12px;
+    top: 8px;
+  }
+}

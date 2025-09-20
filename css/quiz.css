@@ -1,0 +1,219 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+  --bg-dark: #0E1525;   /* fundo principal */
+  --bg-alt: #17243a;    /* variação do fundo */
+  --neon-1: #18deb3ac;    /* cor neon principal */
+  --neon-2: #ffb100;    /* cor neon secundária */
+  --text-light: #938d8d;
+}
+
+header{
+    background: linear-gradient(90deg, #0E1525, #17243a);
+    padding: 2rem 0;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(24, 223, 180, 0.864);
+}
+
+header h1{
+    font-family: 'Poppins' sans-serif;
+    font-size: 2rem;
+    font-weight: 600;  
+    letter-spacing: 1px;
+    color: var(--text);
+    background: linear-gradient(270deg, #18deb3ac, #ffb100, #18deb3ac);
+    background-size: 600% 600%; -webkit-background-clip: text; -webkit-text-fill-color: transparent;;
+    animation: waveColors 15s ease infinite;
+    position: relative;
+}
+
+@keyframes waveColors {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+header h1::after{
+    content: '';
+    display: block;
+    width: 500px;
+    height: 2px;
+    margin: 8px auto 0;
+    background: var(--neon-1);
+    border-radius: 2px;
+}
+
+body{
+    background-color: rgb(24, 44, 66);
+    font-family: 'Poppins' sans-serif; 
+    background: linear-gradient(90deg, #17243a, #0E1525);
+    line-height: 1.6;
+}
+
+.container{
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: linear-gradient(90deg, #0E1525, #17243a);
+    border-radius: 40px;
+    color: var(--text-light);
+    box-shadow: 0 0 10px rgba(24, 223, 180, 0.864);
+}
+
+main section{
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+}
+
+main section h2{
+    margin-bottom: 1rem;
+    color: var(--neon-1);
+    font-size: 1.3rem;
+}
+
+input[type="radio"], [type="checkbox"]{   
+    cursor: pointer;
+    accent-color: var(--neon-2);
+    margin-right: 2px;
+}
+
+label{
+    cursor: pointer;
+    color: var(--text-light);
+    transition: color 0.1s;
+}
+
+label:hover{
+    color:var(--neon-2);
+}
+
+input[type="text"],[type="password"],[type="email"]{
+    padding: 0.5rem;
+    border: 3px solid var(--neon-1);
+    border-radius: 0.5rem;
+    outline: none;
+    background-color: var(--text-light);
+}
+
+input::placeholder{
+    color: var(--bg-alt);
+}
+
+.pergunta4 input{
+    padding: 0.5rem;
+    border: 3px solid var(--neon-1);
+    border-radius: 0.5rem;
+    outline: none;
+    background-color: var(--text-light);
+    cursor: pointer;
+}
+
+.pergunta6 input{
+    padding: 0.3rem;
+    border: 3px solid var(--neon-1);
+    border-radius: 0.5rem;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+select{
+    padding: 0.3rem;
+    border: 3px solid var(--neon-1);
+    border-radius: 0.5rem;
+    outline: none;
+    background-color: var(--text-light);
+    cursor: pointer;   
+}
+
+.pergunta8 img{
+    width: 10rem;
+    }
+
+table{
+    border-collapse: collapse;
+    border-radius: 1rem;
+}
+
+thead th{
+    padding: 0.7rem;
+}
+
+td{
+    padding: 0.5rem;
+    text-align: center;
+}
+
+summary{
+    cursor: pointer;
+    padding: 1rem;
+}
+
+ol{
+   margin-left: 2.4rem; 
+}
+
+ol li{
+    padding: 0.2rem;
+}
+
+fieldset{
+    border: 3px solid var(--neon-1);
+    border-radius: 0.8rem;
+    padding: 1rem;
+}
+
+legend{
+    text-align: center;
+    padding: 0 5px;
+}
+
+textarea{
+    outline: none;
+    border-radius: 0.5rem;
+    background: var(--text-light);
+    border: 3px solid var(--neon-1);
+}
+
+textarea::placeholder{
+    color: var(--bg-alt);
+}
+
+button{
+    cursor: pointer;
+    padding: 0.4rem;
+    border-radius: 0.5rem;
+    background-color: var(--text-light);
+    border: 3px solid var(--neon-1);
+    
+    box-shadow: 0 0 8px rgb(24, 44, 66), 0 0 22px rgb(24, 44, 66) inset;;
+}
+
+button:hover{
+    box-shadow: 0 0 18px rgb(24, 44, 66), 0 0 36px rgb(24, 44, 66), inset 0 0 14px rgb(24, 44, 66);;
+}
+
+@media (max-width:480px) {
+  .button {
+    font-size: 14px;
+    padding: 8px 12px;
+    top: 8px;
+  }
+}
+
+footer{
+    text-align: center;
+}
+
+footer p{
+    color: var(--text-light);
+}
+
+footer a{
+    text-decoration: none;
+    color: var(--neon-1);
+}
